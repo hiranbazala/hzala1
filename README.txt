@@ -25,5 +25,16 @@ done
 
 Ran ./gencsv.sh 
 
+[node1] (local) root@192.168.0.23 ~/csvserver/solution
+$ ls
+csvserver  gencsv.sh  inputdata
+
 docker run -it -d  -v $(pwd):/csvserver -p 9393:9300 --env CSVSERVER_BORDER=Orange infracloudio/csvserver:latest
+
+Output:
+$ docker ps
+CONTAINER ID   IMAGE                           COMMAND                  CREATED          STATUS          PORTS                    NAMES
+f742a0a011bb   infracloudio/csvserver:latest   "/csvserver/csvserver"   25 seconds ago   Up 21 seconds   0.0.0.0:9393->9300/tcp   focused_panini
+
+
 
