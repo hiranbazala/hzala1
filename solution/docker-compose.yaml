@@ -1,12 +1,16 @@
 ---
 version: '3.2'
+### Here we have 2 sevices defined ####
 services:
+### csvserver is uses the image infracloudio/csvserver:latest ###
   csvserver:
     container_name: 'csvserver'
     image: 'infracloudio/csvserver:latest'
+### here is the port mapping from host to container ###
     ports:
      - 9393:9300
     environment:
+### code for border color change ###
      - CSVSERVER_BORDER=Orange
     volumes:
      - "$PWD:/csvserver"
