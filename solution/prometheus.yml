@@ -1,6 +1,6 @@
 scrape_configs:
   - job_name: 'csvserver'
     metrics_path: '/metrics'
-    scrape_interval: 5s
+    scrape_interval: 5m
     static_configs:
       - targets: ['csvserver:9300']
